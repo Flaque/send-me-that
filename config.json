@@ -10,6 +10,8 @@
     "BUILD_API_JS" : "./src/api/**/*.js",
     "BUILD_EDITOR" : "./build/editor",
     "BUILD_EDITOR_CSS" : "style.css",
-    "BUILD_EDITOR_JS" : "index.js"
+    "BUILD_EDITOR_JS" : "index.js",
+    "RESET_CONSOLE" : "./src/editor/components/output/reset-console/",
+    "RESET_CONSOLE_JS" : "./src/editor/components/output/reset-console/reset-console.js"
   }
 }
