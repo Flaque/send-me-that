@@ -9,7 +9,7 @@
    *                    (log, error, warn, ...)
    */
   function log(msg, withClass) {
-    var consoleNode = document.getElementByID('console');
+    var consoleNode = document.getElementById('console');
     var div = document.createElement('div');
     div.className = consoleItemClassName + ' ' + withClass;
     consoleNode.appendChild(div);
@@ -21,5 +21,5 @@
   console.warn = function(msg) { log(msg, 'warn') }
   console.debug = function(msg) { log(msg, 'log') }
   console.exception = function(msg) { log(msg, 'error') }
-  console.info = function(msg) { log(msg, 'info') }
-})
+  console.info = function(msg) { log(msg, 'log') }
+})()
