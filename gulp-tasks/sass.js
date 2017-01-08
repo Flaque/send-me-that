@@ -8,7 +8,7 @@ const path = require('../config.json').path;
  */
 gulp.task('sass', () => {
   return gulp.src(path.EDITOR_SCSS)
-    .pipe(sass.sync().on('error', sass.logError)) // Compile
+    .pipe(sass({includePaths: ['../node_modules']}).on('error', sass.logError)) // Compile
     .pipe(concat(path.BUILD_EDITOR_CSS)) // Combine CSS
     .pipe(gulp.dest(path.BUILD_EDITOR)) // Copy over
 })
