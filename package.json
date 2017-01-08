@@ -1,0 +1,45 @@
+{
+  "name": "ClickTime",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "cors": "^2.8.1",
+    "fast-memoize": "^2.0.2",
+    "gulp-babel": "^6.1.2",
+    "gulp-nodemon": "^2.2.1",
+    "node-font-awesome": "^1.0.2",
+    "react": "^15.4.1",
+    "react-autocomplete": "^1.4.0",
+    "react-dom": "^15.4.1",
+    "require-dir": "^0.3.1",
+    "reqwest": "^2.0.5"
+  },
+  "scripts": {
+    "start": "gulp",
+    "test": "jest",
+    "test-watch": "jest --watch",
+    "create": "node scripts/create/create.js"
+  },
+  "devDependencies": {
+    "babel-preset-es2015": "^6.18.0",
+    "babel-preset-react": "^6.16.0",
+    "babelify": "^7.3.0",
+    "browser-sync": "^2.18.5",
+    "browserify": "^13.1.1",
+    "express": "^4.14.0",
+    "font-awesome": "^4.7.0",
+    "fs-jetpack": "^0.10.5",
+    "gulp": "^3.9.1",
+    "gulp-cli": "^1.2.2",
+    "gulp-concat": "^2.6.1",
+    "gulp-sass": "^3.0.0",
+    "gulp-webserver": "^0.9.1",
+    "jest": "^18.1.0",
+    "mustache": "^2.3.0",
+    "react-test-renderer": "^15.4.1",
+    "vinyl-source-stream": "^1.1.0",
+    "watchify": "^3.8.0"
+  }
+}

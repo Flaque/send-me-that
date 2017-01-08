@@ -1,0 +1,10 @@
+import React from 'react';
+import {{capital_name}} from '../{{capital_name}}.jsx';
+import renderer from 'react-test-renderer';
+
+test('Test that {{capital_name}} is still the same', () => {
+  const tree = renderer.create(
+    <{{capital_name}} />
+  ).toJSON();
+  expect(tree).toMatchSnapshot();
+})

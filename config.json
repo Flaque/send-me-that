@@ -1,0 +1,15 @@
+{
+  "path" : {
+    "EDITOR_SCSS" : "./src/editor/*.scss",
+    "EDITOR_JSX" : "./src/editor/**/*.jsx",
+    "EDITOR_JS" : "./src/editor/**/*.js",
+    "EDITOR_HTML" : "./src/editor/index.html",
+    "EDITOR_ENTRY_JS" : "./src/editor/index.js",
+    "BUILD" : "./build",
+    "BUILD_API" : "./build/api",
+    "BUILD_API_JS" : "./src/api/**/*.js",
+    "BUILD_EDITOR" : "./build/editor",
+    "BUILD_EDITOR_CSS" : "style.css",
+    "BUILD_EDITOR_JS" : "index.js"
+  }
+}
