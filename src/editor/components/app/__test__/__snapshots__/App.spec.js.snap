@@ -1,0 +1,6 @@
+exports[`test Test that App is still the same 1`] = `
+<div
+  className="app">
+  <CodeEditor />
+</div>
+`;

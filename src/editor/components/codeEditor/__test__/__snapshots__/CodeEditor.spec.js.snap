@@ -1,0 +1,12 @@
+exports[`test Test that CodeEditor is still the same 1`] = `
+<CodeMirror
+  onChange={[Function]}
+  options={
+    Object {
+      "lineNumbers": true,
+      "mode": "javascript",
+    }
+  }
+  preserveScrollPosition={false}
+  value="console.log(\"Hello World!\");" />
+`;
