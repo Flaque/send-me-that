@@ -8,6 +8,7 @@ class CodeEditor extends React.Component {
     this.setState({
       code: newCode
     })
+    this.props.onCodeChange(newCode);
   }
 
   constructor(props) {

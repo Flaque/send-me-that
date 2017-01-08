@@ -1,6 +1,12 @@
 exports[`test Test that App is still the same 1`] = `
 <div
   className="app">
-  <CodeEditor />
+  <CodeEditor
+    onCodeChange={[Function]} />
+  <Output
+    code="" />
+  <ButtonGroup
+    onInsert={[Function]}
+    onRun={[Function]} />
 </div>
 `;
