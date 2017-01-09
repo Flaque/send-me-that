@@ -5,6 +5,7 @@
   "license": "MIT",
   "dependencies": {
     "body-parser": "^1.15.2",
+    "brfs": "^1.4.3",
     "codemirror": "^5.22.0",
     "cors": "^2.8.1",
     "gulp-insert": "^0.5.0",
@@ -15,7 +16,8 @@
     "react-dom": "^15.4.1",
     "react-frame-component": "^0.6.6",
     "react-test-utils": "^0.0.1",
-    "require-dir": "^0.3.1"
+    "require-dir": "^0.3.1",
+    "shallow-copy": "^0.0.1"
   },
   "scripts": {
     "start": "gulp",

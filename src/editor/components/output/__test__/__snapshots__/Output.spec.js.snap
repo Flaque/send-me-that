@@ -1,14 +1,7 @@
 exports[`test Test that Output is still the same 1`] = `
 <div
   className="output">
-  <Unknown
-    contentDidMount={[Function]}
-    contentDidUpdate={[Function]}
-    head={<script />}
-    initialContent="<!DOCTYPE html><html><head></head><body><div class=\"frame-root\"></div></body></html>">
-    <h1>
-      hi!
-    </h1>
-  </Unknown>
+  <div
+    id="console" />
 </div>
 `;

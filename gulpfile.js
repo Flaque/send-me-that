@@ -8,7 +8,7 @@ requireDir('./gulp-tasks'); // Loads in entire gulp-tasks folder at once
  * Note the api-js watches itself through watchify since it shouldn't have
  * any real html, sass or react components.
  */
-const onLoad = ['reset-console', 'node-modules', 'api-js', 'editor-jsx',
+const onLoad = ['node-modules', 'api-js', 'editor-jsx',
   'sass', 'editor-html']
 
 /**
@@ -18,6 +18,6 @@ gulp.task('default', onLoad, () => {
   return nodemon({
     script: 'server.js',
     watch: './src',
-    tasks: ['reset-console', 'api-js', 'sass', 'editor-html', 'editor-jsx']
+    tasks: ['api-js', 'sass', 'editor-html', 'editor-jsx']
   })
 })
