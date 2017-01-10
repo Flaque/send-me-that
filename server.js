@@ -2,7 +2,7 @@ var express = require('express');
 var bodyParser = require('body-parser');
 var app = express();
 var cors = require('cors');
-var resolve = require('./build/api/resolver').default; //converting from es6
+var resolve = require('./build/api/resolver'); //converting from es6
 
 // Serve assets in /public.
 app.use(express.static(__dirname + '/build'));

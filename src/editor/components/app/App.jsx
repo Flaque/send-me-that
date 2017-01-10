@@ -24,7 +24,8 @@ class App extends React.Component {
   }
 
   onInsert() {
-    console.log("Insert button pressed");
+    const code = this.state.code
+    Mixmax.done({code: code}) //For production
   }
 
   onCodeChange(value) {
