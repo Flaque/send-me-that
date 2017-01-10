@@ -13,7 +13,7 @@ class CodeEditor extends React.Component {
 
   constructor(props) {
     super(props)
-    this.state = { code: 'console.log("Hello World!");' }
+    this.state = { code: this.props.initialCode }
     this.updateCode = this.updateCode.bind(this)
 
     this.options = {

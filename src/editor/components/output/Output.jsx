@@ -10,6 +10,10 @@ class Output extends React.Component {
   }
 
   componentDidUpdate() {
+    this.run();
+  }
+
+  run() {
 
     /**
      * Clear the console by directly accessing the DOM outside
