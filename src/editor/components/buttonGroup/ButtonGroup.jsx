@@ -4,8 +4,8 @@ class ButtonGroup extends React.Component {
   render() {
     return (
       <div className="buttonGroup">
-        <button onClick={this.props.onRun}> Run </button>
-        <button onClick={this.props.onInsert}> Insert </button>
+        <button id="run" className="primary" onClick={this.props.onRun}> Run </button>
+        <button id="insert" onClick={this.props.onInsert}> Insert </button>
       </div>
     )
   }

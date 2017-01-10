@@ -29,7 +29,7 @@ class App extends React.Component {
 
   render() {
     return (
-      <div className="app">
+      <div className="app card">
         <CodeEditor onCodeChange={this.onCodeChange} />
         <Output code={this.state.runnableCode}/>
         <ButtonGroup onRun={this.onRun} onInsert={this.onInsert}/>

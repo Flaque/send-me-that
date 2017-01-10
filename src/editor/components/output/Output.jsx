@@ -44,9 +44,9 @@ class Output extends React.Component {
 
   render() {
     return (
-      <div className="output">
+      <div className="output bordered">
         <div id="console">
-          {/* Populated only by the reroute function */}
+          {/* Populates <div class="console-item">'s in reroute */}
         </div>
       </div>
     )

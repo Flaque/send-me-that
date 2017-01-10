@@ -25,6 +25,7 @@ class CodeEditor extends React.Component {
   render() {
     return (
       <CodeMirror
+      className='bordered'
       value={this.state.code}
       onChange={this.updateCode}
       options={this.options} />
