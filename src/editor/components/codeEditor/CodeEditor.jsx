@@ -8,11 +8,12 @@ class CodeEditor extends React.Component {
     this.setState({
       code: newCode
     })
+    this.props.onCodeChange(newCode);
   }
 
   constructor(props) {
     super(props)
-    this.state = { code: 'console.log("Hello World!");' }
+    this.state = { code: this.props.initialCode }
     this.updateCode = this.updateCode.bind(this)
 
     this.options = {
@@ -24,6 +25,7 @@ class CodeEditor extends React.Component {
   render() {
     return (
       <CodeMirror
+      className='bordered'
       value={this.state.code}
       onChange={this.updateCode}
       options={this.options} />

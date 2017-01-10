@@ -5,9 +5,10 @@ const browserify = require('browserify');
 const watchify = require('watchify');
 const babelify = require('babelify').configure({"presets": ["es2015", "react"]});
 const path = require('../config.json').path;
+const fs = require('fs');
 
 var bundler = watchify(browserify({entries: path.EDITOR_ENTRY_JS,
-    extension: ['jsx']}).transform(babelify))
+    extension: ['jsx']}).transform(babelify).transform('brfs'))
 
 /**
  * Bundle

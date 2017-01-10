@@ -1,0 +1,13 @@
+#console {
+  height: 100px;
+  background: #383838;
+  color: white;
+  padding: 10px;
+  overflow: scroll;
+
+  .console-item {
+    width: 100%;
+    font-family: "Courier New", Courier;
+    border-bottom: 1px solid #444;
+  }
+}

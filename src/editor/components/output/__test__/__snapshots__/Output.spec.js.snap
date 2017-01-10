@@ -1,0 +1,7 @@
+exports[`test Test that Output is still the same 1`] = `
+<div
+  className="output">
+  <div
+    id="console" />
+</div>
+`;

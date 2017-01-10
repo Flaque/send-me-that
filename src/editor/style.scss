@@ -1,1 +1,23 @@
+@import 'lib/rottie.scss';
 @import '../../node_modules/codemirror/lib/codemirror.css';
+@import 'components/output/Output.scss';
+@import 'components/codeEditor/CodeEditor.scss';
+@import 'components/buttonGroup/ButtonGroup.scss';
+
+
+body {
+  margin: 0;
+}
+
+#root {
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  background: #fcfcfc;
+
+  .app {
+    width:800px;
+    max-height: 700px;
+  }
+}

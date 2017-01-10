@@ -1,0 +1,10 @@
+.app {
+  .ReactCodeMirror {
+    border-top-right-radius: 3px;
+    border-top-left-radius: 3px;
+
+    .CodeMirror-gutters {
+      border-right: 1px solid #eee;
+    }
+  }
+}
