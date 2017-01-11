@@ -1,0 +1,24 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="/editor/style.css">
+    <!-- Mixmax SDK -->
+
+    {{#isEditor}}
+    <script defer src="https://d1xa36cy0xt122.cloudfront.net/v1/Mixmax.js"></script>
+    {{/isEditor}}
+
+    {{#inScript}}
+    <script> {{&code}} </script>
+    {{/inScript}}
+
+  </head>
+
+  <body>
+    <div id="root">
+    </div>
+  </body>
+
+  <footer>
+    <script src="/editor/index.js"> </script>
+  </footer>
+</html>

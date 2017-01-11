@@ -1,10 +1,17 @@
-var express = require('express');
-var bodyParser = require('body-parser');
-var app = express();
-var cors = require('cors');
-var resolve = require('./build/api/resolver').default; //converting from es6
+const express = require('express');
+const bodyParser = require('body-parser');
+const app = express();
+const cors = require('cors');
+const resolve = require('./build/api/resolver'); //converting from es6
+const mustache = require('mustache');
+const fs = require('fs')
 
-// Serve assets in /public.
+function sendFilledHTML(res, data) {
+  const template = fs.readFileSync(__dirname + '/build/editor/editor.html', "utf8")
+  res.send(mustache.render(template, data))
+}
+
+// Serve assets in /build.
 app.use(express.static(__dirname + '/build'));
 
 // So we can POST.
@@ -20,8 +27,23 @@ var corsOptions = {
 
 // The editor interface.
 app.get('/editor', function(req, res) {
-  res.sendFile(__dirname + '/editor/index.html');
+  sendFilledHTML(res, {
+    isEditor: true
+  })
 });
+
+/**
+ * Runs from the resolver.html.tmpl submit button.
+ */
+app.get('/scriptrunner', function(req, res) {
+
+  sendFilledHTML(res, {
+    isEditor: false,
+    inScript: {
+      code: "var set_code = '" + req.query.code + "'"
+    }
+  })
+})
 
 // The in-email representation.
 app.post('/api/resolver', cors(corsOptions), resolve);

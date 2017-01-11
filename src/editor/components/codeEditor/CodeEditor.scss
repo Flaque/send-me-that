@@ -1,10 +1,24 @@
+$editor-max-height: 300px;
+
 .app {
   .ReactCodeMirror {
     border-top-right-radius: 3px;
     border-top-left-radius: 3px;
+    max-height: $editor-max-height;
+    display: flex;
 
     .CodeMirror-gutters {
       border-right: 1px solid #eee;
+    }
+  }
+
+  .CodeMirror {
+    border: 1px solid #eee;
+    height: auto;
+    width: 100%;
+
+    .CodeMirror-scroll {
+      max-height: $editor-max-height;
     }
   }
 }

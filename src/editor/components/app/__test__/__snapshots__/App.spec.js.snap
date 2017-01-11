@@ -1,12 +1,15 @@
 exports[`test Test that App is still the same 1`] = `
 <div
-  className="app">
+  className="app card">
   <CodeEditor
+    initialCode="// Type your code here!
+  console.log(\"Hello MixMax!\");"
     onCodeChange={[Function]} />
   <Output
     code="" />
   <ButtonGroup
     onInsert={[Function]}
-    onRun={[Function]} />
+    onRun={[Function]}
+    showInsert={true} />
 </div>
 `;

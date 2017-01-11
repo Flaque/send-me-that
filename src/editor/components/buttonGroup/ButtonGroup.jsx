@@ -5,7 +5,10 @@ class ButtonGroup extends React.Component {
     return (
       <div className="buttonGroup">
         <button id="run" className="primary" onClick={this.props.onRun}> Run </button>
-        <button id="insert" onClick={this.props.onInsert}> Insert </button>
+
+        {this.props.showInsert &&
+          <button id="insert" onClick={this.props.onInsert}> Insert </button>
+        }
       </div>
     )
   }

@@ -8,7 +8,7 @@ requireDir('./gulp-tasks'); // Loads in entire gulp-tasks folder at once
  * Note the api-js watches itself through watchify since it shouldn't have
  * any real html, sass or react components.
  */
-const onLoad = ['node-modules', 'api-js', 'editor-jsx',
+let onLoad = ['api-html', 'node-modules', 'api-js', 'bundle',
   'sass', 'editor-html']
 
 /**
@@ -18,6 +18,16 @@ gulp.task('default', onLoad, () => {
   return nodemon({
     script: 'server.js',
     watch: './src',
-    tasks: ['api-js', 'sass', 'editor-html', 'editor-jsx']
+    tasks: ['api-html','api-js', 'sass', 'editor-html', 'bundle']
+  })
+})
+
+
+onLoad.push('apply-prod-environment') //Add prod environment
+gulp.task('prod-build-test', onLoad, () => {
+  return nodemon({
+    script: 'server.js',
+    watch: './src',
+    tasks: ['api-html', 'api-js', 'sass', 'editor-html', 'bundle']
   })
 })
