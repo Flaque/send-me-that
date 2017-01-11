@@ -13,6 +13,7 @@ module.exports = function resolve(req, res) {
   }
 
   var data = JSON.parse(req.body.params);
+  var runURL = req.protocol + '://' + req.get('host') + '/scriptrunner'
 
   // No data!
   if (!data) {
@@ -20,9 +21,13 @@ module.exports = function resolve(req, res) {
   }
 
   // Render the html, and embed the global code state
-  var code_declaration = `var global_code="${data.code}"`
+  let inputCode = data.code.split('\n')
+  inputCode = inputCode.join('\\n') //Explicitly add new line characters to avoid url issues
+
   var html = mustache.render(template, {
-    code_declaration: code_declaration
+    code: data.code,
+    inputCode: inputCode,
+    runURL: runURL
   })
 
   res.json({

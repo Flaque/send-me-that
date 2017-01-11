@@ -4,14 +4,26 @@ import Output from '../output/Output.jsx';
 import ButtonGroup from '../buttonGroup/ButtonGroup.jsx';
 
 
-const DEFAULT_CODE = `// Type your code here!
+let DEFAULT_CODE = `// Type your code here!
 console.log("Hello MixMax!");`
 
 class App extends React.Component {
 
   constructor(props) {
     super(props)
-    this.state = { code: DEFAULT_CODE, runnableCode: '' }
+
+    let showInsert = true
+
+    // We are running from /scriptrunner (opened in a sent email)
+    if (window.set_code) {
+      DEFAULT_CODE = window.set_code
+      showInsert = false
+    }
+
+    this.state = {
+      showInsert: showInsert,
+      code: DEFAULT_CODE,
+      runnableCode: '' }
     this.onRun = this.onRun.bind(this);
     this.onInsert = this.onInsert.bind(this);
     this.onCodeChange = this.onCodeChange.bind(this);
@@ -37,7 +49,11 @@ class App extends React.Component {
       <div className="app card">
         <CodeEditor onCodeChange={this.onCodeChange} initialCode={DEFAULT_CODE} />
         <Output code={this.state.runnableCode}/>
-        <ButtonGroup onRun={this.onRun} onInsert={this.onInsert}/>
+        <ButtonGroup
+          onRun={this.onRun}
+          onInsert={this.onInsert}
+          showInsert={this.state.showInsert}
+        />
       </div>
     )
   }

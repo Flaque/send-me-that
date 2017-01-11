@@ -3,7 +3,7 @@
     "EDITOR_SCSS" : "./src/editor/*.scss",
     "EDITOR_JSX" : "./src/editor/**/*.jsx",
     "EDITOR_JS" : "./src/editor/**/*.js",
-    "EDITOR_HTML" : "./src/editor/index.html",
+    "EDITOR_HTML" : "./src/editor/editor.html",
     "EDITOR_ENTRY_JS" : "./src/editor/index.js",
     "API_HTML" : "./src/api/resolver.html.tmpl",
     "BUILD" : "./build",

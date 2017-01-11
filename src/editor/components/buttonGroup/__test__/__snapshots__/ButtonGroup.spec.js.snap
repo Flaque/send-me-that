@@ -2,12 +2,10 @@ exports[`test Test that ButtonGroup is still the same 1`] = `
 <div
   className="buttonGroup">
   <button
+    className="primary"
+    id="run"
     onClick={undefined}>
      Run 
-  </button>
-  <button
-    onClick={undefined}>
-     Insert 
   </button>
 </div>
 `;
