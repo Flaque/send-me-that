@@ -1,3 +1,7 @@
+const fs = require('fs')
+const template = fs.readFileSync(__dirname + '/resolver.html.tmpl', "utf8")
+const mustache = require('mustache')
+
 module.exports = function resolve(req, res) {
 
   console.log("Resolver being hit!");
@@ -15,7 +19,12 @@ module.exports = function resolve(req, res) {
     res.status(403 /* Unauthorized */ ).send('Invalid params')
   }
 
-  var html = '<p>hi there' + data.code + ' </p>'
+  // Render the html, and embed the global code state
+  var code_declaration = `var global_code="${data.code}"`
+  var html = mustache.render(template, {
+    code_declaration: code_declaration
+  })
+
   res.json({
     body: html
     // Add raw:true if you're returning content that you want the user to be able to edit

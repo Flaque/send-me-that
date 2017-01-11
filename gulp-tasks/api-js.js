@@ -6,7 +6,7 @@ const path = require('../config.json').path;
  * Editor HTML
  */
 gulp.task('api-js', () => {
-  gulp.src(path.BUILD_API_JS)
+  gulp.src(path.BUILD_API_JS_RESOLVER)
     .pipe(babel({ presets: ['es2015'] }))
     .pipe(gulp.dest(path.BUILD_API));
 })
