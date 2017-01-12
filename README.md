@@ -28,6 +28,11 @@ Or you can run
 
 to run with a compressed version of react.
 
+## Test!
+We use [jest](https://facebook.github.io/jest/) as our test runner.
+
+``` npm test-watch ``` or ``` yarn test-watch ```
+
 ## Create!
 You can create new react modules with the create script found in
 `scripts/create`. It will autogenerate a sass file and a jest
