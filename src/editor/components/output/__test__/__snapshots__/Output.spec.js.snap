@@ -1,6 +1,6 @@
 exports[`test Test that Output is still the same 1`] = `
 <div
-  className="output">
+  className="output bordered">
   <div
     id="console" />
 </div>

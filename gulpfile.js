@@ -12,7 +12,7 @@ let onLoad = ['api-html', 'node-modules', 'api-js', 'bundle',
   'sass', 'editor-html']
 
 /**
- * Watches the editor
+ * Launches the integration
  */
 gulp.task('default', onLoad, () => {
   return nodemon({
@@ -22,7 +22,9 @@ gulp.task('default', onLoad, () => {
   })
 })
 
-
+/**
+ * Launches the integration in a prod-like environment
+ */
 onLoad.push('apply-prod-environment') //Add prod environment
 gulp.task('prod-build-test', onLoad, () => {
   return nodemon({

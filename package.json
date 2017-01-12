@@ -8,19 +8,16 @@
     "brfs": "^1.4.3",
     "codemirror": "^5.22.0",
     "cors": "^2.8.1",
-    "gulp-import-css": "^0.1.3",
     "mustache": "^2.3.0",
     "react": "^15.4.1",
-    "react-addons-test-utils": "^15.4.2",
     "react-codemirror": "^0.3.0",
     "react-dom": "^15.4.1",
     "react-frame-component": "^0.6.6",
-    "require-dir": "^0.3.1",
-    "require-text": "^0.0.1",
     "shallow-copy": "^0.0.1"
   },
   "scripts": {
     "start": "gulp",
+    "start-like-prod": "gulp prod-build-test",
     "test": "jest",
     "test-watch": "jest --watch",
     "create": "node scripts/create/create.js"
@@ -28,6 +25,9 @@
   "devDependencies": {
     "babel-preset-es2015": "^6.18.0",
     "babel-preset-react": "^6.16.0",
+    "react-addons-test-utils": "^15.4.2",
+    "require-dir": "^0.3.1",
+    "gulp-import-css": "^0.1.3",
     "babelify": "^7.3.0",
     "browser-sync": "^2.18.5",
     "browserify": "^13.1.1",

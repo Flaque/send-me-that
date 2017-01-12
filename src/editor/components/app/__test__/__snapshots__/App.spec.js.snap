@@ -3,7 +3,7 @@ exports[`test Test that App is still the same 1`] = `
   className="app card">
   <CodeEditor
     initialCode="// Type your code here!
-  console.log(\"Hello MixMax!\");"
+  console.log(\"I hope you have a good day!\");"
     onCodeChange={[Function]} />
   <Output
     code="" />

@@ -5,11 +5,8 @@ const cors = require('cors');
 const resolve = require('./build/api/resolver'); //converting from es6
 const mustache = require('mustache');
 const fs = require('fs')
-
-function sendFilledHTML(res, data) {
-  const template = fs.readFileSync(__dirname + '/build/editor/editor.html', "utf8")
-  res.send(mustache.render(template, data))
-}
+const editor = require('./build/api/editor');
+const scriptrunner = require('./build/api/scriptrunner');
 
 // Serve assets in /build.
 app.use(express.static(__dirname + '/build'));
@@ -26,24 +23,12 @@ var corsOptions = {
 };
 
 // The editor interface.
-app.get('/editor', function(req, res) {
-  sendFilledHTML(res, {
-    isEditor: true
-  })
-});
+app.get('/editor', editor);
 
 /**
  * Runs from the resolver.html.tmpl submit button.
  */
-app.get('/scriptrunner', function(req, res) {
-
-  sendFilledHTML(res, {
-    isEditor: false,
-    inScript: {
-      code: "var set_code = '" + req.query.code + "'"
-    }
-  })
-})
+app.get('/scriptrunner', scriptrunner)
 
 // The in-email representation.
 app.post('/api/resolver', cors(corsOptions), resolve);

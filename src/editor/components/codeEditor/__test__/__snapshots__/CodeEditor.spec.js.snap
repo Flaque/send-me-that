@@ -1,5 +1,6 @@
 exports[`test Test that CodeEditor is still the same 1`] = `
 <CodeMirror
+  className="bordered"
   onChange={[Function]}
   options={
     Object {
@@ -8,5 +9,5 @@ exports[`test Test that CodeEditor is still the same 1`] = `
     }
   }
   preserveScrollPosition={false}
-  value="console.log(\"Hello World!\");" />
+  value={undefined} />
 `;

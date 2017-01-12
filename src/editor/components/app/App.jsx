@@ -5,7 +5,7 @@ import ButtonGroup from '../buttonGroup/ButtonGroup.jsx';
 
 
 let DEFAULT_CODE = `// Type your code here!
-console.log("Hello MixMax!");`
+console.log("I hope you have a good day!");`
 
 class App extends React.Component {
 
