@@ -9,5 +9,13 @@
     width: 100%;
     font-family: "Courier New", Courier;
     border-bottom: 1px solid #444;
+
+    &.warn {
+      color: hsl( 29, 54%, 61%);
+    }
+
+    &.error {
+      color: hsl(355, 65%, 65%);
+    }
   }
 }
